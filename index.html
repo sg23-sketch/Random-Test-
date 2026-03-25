@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Portfolio & Pacifier | Podcast for Moms in Finance</title>
-  <meta name="description" content="A podcast for first-time moms navigating motherhood and a career in finance. Real talk on markets, maternity leave, and the messy middle." />
+  <title>The Portfolio & Pacifier | A Podcast by Jessica Morgan</title>
+  <meta name="description" content="A personal podcast about being a first-time mom and a woman building a career in finance. Real stories, honest lessons, and the beautiful mess in between." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,12 +15,13 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav__inner container">
-      <a href="#" class="nav__logo">P&amp;P</a>
+      <a href="#" class="nav__logo">the <em>p&amp;p</em></a>
       <ul class="nav__links">
         <li><a href="#about">About</a></li>
         <li><a href="#episodes">Episodes</a></li>
-        <li><a href="#host">Host</a></li>
-        <li><a href="#subscribe" class="btn btn--small">Subscribe</a></li>
+        <li><a href="#host">My Story</a></li>
+        <li><a href="#sponsors">Work With Me</a></li>
+        <li><a href="#subscribe" class="btn btn--pill">Follow Along</a></li>
       </ul>
       <button class="nav__burger" aria-label="Open menu">&#9776;</button>
     </div>
@@ -28,115 +29,84 @@
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero__bg-shapes" aria-hidden="true">
-      <span class="shape shape--1"></span>
-      <span class="shape shape--2"></span>
-      <span class="shape shape--3"></span>
+    <div class="hero__petals" aria-hidden="true">
+      <span class="petal petal--1"></span>
+      <span class="petal petal--2"></span>
+      <span class="petal petal--3"></span>
+      <span class="petal petal--4"></span>
     </div>
     <div class="container hero__inner">
-      <div class="hero__badge">New Episodes Every Tuesday</div>
+      <div class="hero__eyebrow">New episodes every Tuesday ✨</div>
       <h1 class="hero__title">
         The Portfolio<br />
-        <em>&amp; Pacifier</em>
+        <span class="script">&amp; Pacifier</span>
       </h1>
       <p class="hero__subtitle">
-        Where Wall Street meets the nursery. Real conversations for first-time moms building careers — and families — in finance.
+        A personal podcast about the beautiful, messy, wildly unpredictable journey of becoming a first-time mom while building a career in finance. I share the lessons, the wins, the wobbles — and occasionally bring in a guest I love.
       </p>
       <div class="hero__cta">
-        <a href="#subscribe" class="btn btn--primary">Listen Free</a>
-        <a href="#episodes" class="btn btn--ghost">Browse Episodes</a>
+        <a href="#episodes" class="btn btn--primary">Listen Now</a>
+        <a href="#host" class="btn btn--soft">My Story</a>
       </div>
       <div class="hero__platforms">
-        <span>Available on</span>
-        <div class="platform-icons">
-          <a href="#" class="platform-icon" aria-label="Spotify">
+        <span class="listen-on">Available on</span>
+        <div class="platform-row">
+          <a href="#" class="platform-chip">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
             Spotify
           </a>
-          <a href="#" class="platform-icon" aria-label="Apple Podcasts">
+          <a href="#" class="platform-chip">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.003 0C5.375 0 0 5.375 0 12.004 0 18.63 5.375 24 12.003 24 18.629 24 24 18.63 24 12.004 24 5.375 18.629 0 12.003 0zm.79 15.862a1.294 1.294 0 01-1.592 0c-.388-.3-.534-.78-.376-1.226l1.041-3.068-2.428-1.672a1.152 1.152 0 01-.497-.961c0-.565.383-1.043.907-1.19L12.003 7l2.155.745c.524.147.907.625.907 1.19 0 .371-.18.71-.497.961l-2.428 1.672 1.041 3.068c.158.446.012.926-.388 1.226z"/></svg>
             Apple Podcasts
           </a>
-          <a href="#" class="platform-icon" aria-label="Google Podcasts">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 17.25a1.5 1.5 0 003 0v-3.75a1.5 1.5 0 00-3 0v3.75zm0-9.75a1.5 1.5 0 003 0V6a1.5 1.5 0 00-3 0v1.5zm-3 4.5a1.5 1.5 0 003 0v-1.5a1.5 1.5 0 00-3 0V12zm9 0a1.5 1.5 0 003 0v-1.5a1.5 1.5 0 00-3 0V12z"/></svg>
-            Google Podcasts
-          </a>
+          <a href="#" class="platform-chip">YouTube</a>
         </div>
       </div>
     </div>
-  </header>
-
-  <!-- STATS STRIP -->
-  <section class="stats-strip">
-    <div class="container stats-strip__inner">
-      <div class="stat">
-        <span class="stat__number">50K+</span>
-        <span class="stat__label">Monthly Listeners</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">80+</span>
-        <span class="stat__label">Episodes</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">4.9 ★</span>
-        <span class="stat__label">Avg. Rating</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">#3</span>
-        <span class="stat__label">Finance Podcast Charts</span>
-      </div>
+    <!-- decorative waveform -->
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#fdfaf7"/></svg>
     </div>
-  </section>
+  </header>
 
   <!-- ABOUT -->
   <section class="about section" id="about">
     <div class="container about__inner">
-      <div class="about__text">
-        <span class="section-label">The Show</span>
-        <h2 class="section-title">Finance didn't pause for your baby. We get it.</h2>
-        <p>
-          The Portfolio &amp; Pacifier is the podcast that no one made when we needed it most — so we made it ourselves. Each week we sit down with women who are crushing it in finance while figuring out sleep schedules, maternity leave politics, pumping at work, and everything in between.
-        </p>
-        <p>
-          Whether you're an analyst on the trading floor, an advisor building your book, or an aspiring CFO with a newborn on your hip — this is your community.
-        </p>
-        <ul class="about__topics">
-          <li>Negotiating maternity leave in male-dominated firms</li>
-          <li>Returning to work: identity, confidence &amp; childcare math</li>
-          <li>Building wealth while paying for diapers</li>
-          <li>Setting financial goals as a new family</li>
-          <li>Mental health &amp; the pressure of "having it all"</li>
-        </ul>
-      </div>
       <div class="about__visual">
-        <div class="podcast-card">
-          <div class="podcast-card__art">
-            <div class="album-art">
-              <div class="album-art__icon">
-                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="40" cy="40" r="38" stroke="white" stroke-width="2" stroke-opacity="0.3"/>
-                  <circle cx="40" cy="40" r="6" fill="white" fill-opacity="0.9"/>
-                  <path d="M40 22v6M40 52v6M22 40h6M52 40h6" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M27.5 27.5l4.2 4.2M48.3 48.3l4.2 4.2M52.5 27.5l-4.2 4.2M31.7 48.3l-4.2 4.2" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+        <div class="vlog-card">
+          <div class="vlog-card__thumbnail">
+            <div class="thumbnail-inner">
+              <div class="thumb-avatar">JM</div>
+              <div class="thumb-play">
+                <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
               </div>
-              <p class="album-art__title">The Portfolio &amp; Pacifier</p>
-              <p class="album-art__sub">Finance. Motherhood. Real Talk.</p>
             </div>
+            <div class="vlog-card__tag">Latest Episode</div>
           </div>
-          <div class="podcast-card__player">
-            <div class="player-bar">
-              <div class="player-bar__fill"></div>
-            </div>
-            <div class="player-controls">
-              <button aria-label="Rewind 15s">&#9664;&#9664;</button>
-              <button class="play-btn" aria-label="Play">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </button>
-              <button aria-label="Forward 15s">&#9654;&#9654;</button>
-            </div>
-            <p class="player-ep">Ep. 83 — Back to the Trading Floor After Baby</p>
+          <div class="vlog-card__body">
+            <p class="vlog-card__ep">Ep. 12 · 34 min</p>
+            <h3 class="vlog-card__title">The Day I Almost Quit — And What I Did Instead</h3>
+            <p class="vlog-card__desc">Honest, unfiltered, a little emotional. This one is for anyone who's ever wondered if they're doing it all wrong.</p>
+            <a href="#" class="btn btn--primary btn--small">Listen →</a>
           </div>
+        </div>
+      </div>
+      <div class="about__text">
+        <span class="section-label">What this show is</span>
+        <h2 class="section-title">Think of it like a voice note from a friend who happens to know a lot about money.</h2>
+        <p>
+          Every week I sit down — usually with a coffee that went cold — and share what's actually happening in my life as a new mom and someone who works in finance. Some episodes are reflective. Some are practical. Some are just me processing something out loud.
+        </p>
+        <p>
+          Occasionally I bring in a guest: someone whose perspective I think you'll love. But mostly it's just me, being honest about the journey.
+        </p>
+        <div class="topics-row">
+          <div class="topic-pill">💛 Money &amp; motherhood</div>
+          <div class="topic-pill">🌿 Identity &amp; purpose</div>
+          <div class="topic-pill">📈 Career lessons</div>
+          <div class="topic-pill">👶 First-time mom life</div>
+          <div class="topic-pill">🎙️ Occasional guests</div>
+          <div class="topic-pill">✨ Real talk, always</div>
         </div>
       </div>
     </div>
@@ -145,112 +115,84 @@
   <!-- EPISODES -->
   <section class="episodes section" id="episodes">
     <div class="container">
-      <span class="section-label">Recent Episodes</span>
-      <h2 class="section-title">Latest from the feed</h2>
+      <div class="episodes__header">
+        <div>
+          <span class="section-label">Recent Episodes</span>
+          <h2 class="section-title">What we've been talking about</h2>
+        </div>
+        <a href="#" class="btn btn--outline">All episodes →</a>
+      </div>
       <div class="episodes__grid">
 
-        <article class="episode-card episode-card--featured">
-          <div class="episode-card__meta">
-            <span class="ep-num">EP. 83</span>
-            <span class="ep-date">Mar 18, 2026</span>
-          </div>
-          <h3 class="episode-card__title">Back to the Trading Floor After Baby: What Nobody Tells You</h3>
-          <p class="episode-card__desc">Sarah Chen, VP at a bulge-bracket bank, shares the raw reality of her return — from negotiating a phased schedule to managing pumping logistics on a desk with no privacy.</p>
-          <div class="episode-card__footer">
-            <span class="ep-duration">48 min</span>
-            <a href="#" class="btn btn--small">Listen Now</a>
-          </div>
+        <article class="ep-card ep-card--wide">
+          <div class="ep-card__badge ep-badge--story">Story Time</div>
+          <div class="ep-card__meta">Ep. 12 · Mar 18, 2026 · 34 min</div>
+          <h3 class="ep-card__title">The Day I Almost Quit — And What I Did Instead</h3>
+          <p class="ep-card__desc">Six weeks postpartum, back at my desk, completely overwhelmed. I'm sharing exactly what happened, what I felt, and the one thing that changed everything for me.</p>
+          <a href="#" class="ep-card__link">Listen now →</a>
         </article>
 
-        <article class="episode-card">
-          <div class="episode-card__meta">
-            <span class="ep-num">EP. 82</span>
-            <span class="ep-date">Mar 11, 2026</span>
-          </div>
-          <h3 class="episode-card__title">The Real Cost of Childcare — A CFO's Analysis</h3>
-          <p class="episode-card__desc">We run the actual numbers on childcare in major financial hubs and talk through strategies to optimize family cash flow without guilt.</p>
-          <div class="episode-card__footer">
-            <span class="ep-duration">41 min</span>
-            <a href="#" class="btn btn--small">Listen Now</a>
-          </div>
+        <article class="ep-card">
+          <div class="ep-card__badge ep-badge--money">Money Talk</div>
+          <div class="ep-card__meta">Ep. 11 · Mar 11, 2026 · 28 min</div>
+          <h3 class="ep-card__title">The Financial Checklist I Wish I'd Had Before Baby Arrived</h3>
+          <p class="ep-card__desc">529s, updated beneficiaries, life insurance — the real list, in order of priority, with no overwhelm.</p>
+          <a href="#" class="ep-card__link">Listen now →</a>
         </article>
 
-        <article class="episode-card">
-          <div class="episode-card__meta">
-            <span class="ep-num">EP. 81</span>
-            <span class="ep-date">Mar 4, 2026</span>
-          </div>
-          <h3 class="episode-card__title">Negotiating Maternity Leave When You're the Only Woman on the Team</h3>
-          <p class="episode-card__desc">Attorney &amp; former hedge fund analyst Maya Torres walks through your rights, negotiation tactics, and how to document everything without burning bridges.</p>
-          <div class="episode-card__footer">
-            <span class="ep-duration">55 min</span>
-            <a href="#" class="btn btn--small">Listen Now</a>
-          </div>
+        <article class="ep-card">
+          <div class="ep-card__badge ep-badge--guest">Guest Chat</div>
+          <div class="ep-card__meta">Ep. 10 · Mar 4, 2026 · 52 min</div>
+          <h3 class="ep-card__title">My Friend Priya on Returning to Work After Her Second Baby</h3>
+          <p class="ep-card__desc">Priya is a financial planner, a mom of two, and one of the most grounded people I know. She shares what she did differently the second time around.</p>
+          <a href="#" class="ep-card__link">Listen now →</a>
         </article>
 
-        <article class="episode-card">
-          <div class="episode-card__meta">
-            <span class="ep-num">EP. 80</span>
-            <span class="ep-date">Feb 25, 2026</span>
-          </div>
-          <h3 class="episode-card__title">Identity Shifts: When "Analyst" and "Mom" Collide</h3>
-          <p class="episode-card__desc">A candid conversation with a licensed therapist who specializes in high-achieving new mothers navigating career identity crises.</p>
-          <div class="episode-card__footer">
-            <span class="ep-duration">38 min</span>
-            <a href="#" class="btn btn--small">Listen Now</a>
-          </div>
+        <article class="ep-card">
+          <div class="ep-card__badge ep-badge--story">Real Talk</div>
+          <div class="ep-card__meta">Ep. 9 · Feb 25, 2026 · 22 min</div>
+          <h3 class="ep-card__title">Things I Got Wrong About Work-Life Balance (And What I Think Now)</h3>
+          <p class="ep-card__desc">A mini solo episode. A few honest confessions. Zero perfect answers — just what's working for me right now.</p>
+          <a href="#" class="ep-card__link">Listen now →</a>
         </article>
 
-        <article class="episode-card">
-          <div class="episode-card__meta">
-            <span class="ep-num">EP. 79</span>
-            <span class="ep-date">Feb 18, 2026</span>
-          </div>
-          <h3 class="episode-card__title">529 Plans, Life Insurance &amp; Wills — Your New-Parent Finance Checklist</h3>
-          <p class="episode-card__desc">Financial planner Priya Nair breaks down the exact financial moves to make in baby's first year, in order of priority.</p>
-          <div class="episode-card__footer">
-            <span class="ep-duration">44 min</span>
-            <a href="#" class="btn btn--small">Listen Now</a>
-          </div>
+        <article class="ep-card">
+          <div class="ep-card__badge ep-badge--money">Money Talk</div>
+          <div class="ep-card__meta">Ep. 8 · Feb 18, 2026 · 31 min</div>
+          <h3 class="ep-card__title">How We Actually Afford Childcare (The Honest Numbers)</h3>
+          <p class="ep-card__desc">We ran the numbers. They were scary. Then we made a plan. I'm walking you through exactly what that looked like for our family.</p>
+          <a href="#" class="ep-card__link">Listen now →</a>
         </article>
 
-        <article class="episode-card">
-          <div class="episode-card__meta">
-            <span class="ep-num">EP. 78</span>
-            <span class="ep-date">Feb 11, 2026</span>
-          </div>
-          <h3 class="episode-card__title">Raising a Family on One Salary While Growing Your Career</h3>
-          <p class="episode-card__desc">When your partner stays home, the financial pressure shifts. Three couples share how they rewrote their money story and stayed aligned.</p>
-          <div class="episode-card__footer">
-            <span class="ep-duration">52 min</span>
-            <a href="#" class="btn btn--small">Listen Now</a>
-          </div>
+        <article class="ep-card">
+          <div class="ep-card__badge ep-badge--story">Story Time</div>
+          <div class="ep-card__meta">Ep. 7 · Feb 11, 2026 · 19 min</div>
+          <h3 class="ep-card__title">My Favorite Lesson From Year One of Motherhood</h3>
+          <p class="ep-card__desc">Short, sweet, and from the heart. The one thing I keep coming back to when everything feels like too much.</p>
+          <a href="#" class="ep-card__link">Listen now →</a>
         </article>
 
-      </div>
-      <div class="episodes__more">
-        <a href="#" class="btn btn--outline">See All Episodes</a>
       </div>
     </div>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="testimonials section">
+  <section class="love section">
     <div class="container">
-      <span class="section-label">Listener Love</span>
-      <h2 class="section-title">Women who get it, love it</h2>
-      <div class="testimonials__grid">
-        <blockquote class="testimonial">
-          <p>"I cried during the maternity leave negotiation episode. Finally someone said out loud what I was afraid to even think."</p>
-          <footer>— @finance.mama.nyc</footer>
+      <span class="section-label">Listener love</span>
+      <h2 class="section-title">You're not alone in feeling this way</h2>
+      <div class="love__grid">
+        <blockquote class="love-card">
+          <p>"Honestly feels like a voice note from a best friend. I listen while feeding the baby at 3am and it makes me feel so much less alone."</p>
+          <footer>— @newmom.infinance</footer>
         </blockquote>
-        <blockquote class="testimonial testimonial--accent">
-          <p>"The childcare cost breakdown episode saved my budget AND my sanity. I sent it to my entire team."</p>
-          <footer>— Investment Banking Associate, Chicago</footer>
+        <blockquote class="love-card love-card--rose">
+          <p>"The childcare numbers episode made me cry and then immediately feel better. Finally someone just telling the truth."</p>
+          <footer>— Sarah, financial advisor &amp; mom of one</footer>
         </blockquote>
-        <blockquote class="testimonial">
-          <p>"This podcast made me feel less alone on a Monday morning pumping session at my desk. 10/10."</p>
-          <footer>— @themomanalyst</footer>
+        <blockquote class="love-card">
+          <p>"I've recommended this show to every woman on my team who's expecting. It's the resource I wish I'd had."</p>
+          <footer>— @portfoliomama</footer>
         </blockquote>
       </div>
     </div>
@@ -259,50 +201,108 @@
   <!-- HOST -->
   <section class="host section" id="host">
     <div class="container host__inner">
-      <div class="host__avatar" aria-hidden="true">
-        <div class="avatar-circle">
-          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="60" cy="45" r="24" fill="white" fill-opacity="0.25"/>
-            <ellipse cx="60" cy="96" rx="38" ry="24" fill="white" fill-opacity="0.18"/>
-          </svg>
-          <span class="avatar-initials">JM</span>
+      <div class="host__photo">
+        <div class="host__frame">
+          <div class="host__initials-circle">JM</div>
+        </div>
+        <div class="host__socials">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">TikTok</a>
+          <a href="#" class="social-btn">YouTube</a>
         </div>
       </div>
       <div class="host__text">
-        <span class="section-label">Your Host</span>
-        <h2 class="section-title">Jessica Morgan</h2>
-        <p class="host__bio">
-          Former portfolio manager turned podcast host, Jessica spent a decade on the buy-side before having her daughter, Lily. She started The Portfolio &amp; Pacifier after discovering how little support existed for women in finance who were also becoming mothers for the first time.
+        <span class="section-label">My story</span>
+        <h2 class="section-title">Hi, I'm Jessica. <span class="script">So glad you're here.</span></h2>
+        <p>
+          I started this podcast because I couldn't find what I was looking for: something honest, warm, and specifically for women navigating a career in finance while figuring out motherhood for the very first time.
         </p>
-        <p class="host__bio">
-          Jessica holds a CFA designation and an MBA from Wharton. She now lives in New York City with her husband, her daughter, and one very judgy cat.
+        <p>
+          I spent over a decade working in investment management before having my daughter, Lily. And I had absolutely no idea how much that would change — and not change — how I showed up at work, at home, and for myself.
         </p>
-        <div class="host__socials">
-          <a href="#" class="social-link">Instagram</a>
-          <a href="#" class="social-link">LinkedIn</a>
-          <a href="#" class="social-link">Twitter / X</a>
+        <p>
+          So I started talking about it. I hope something here helps you feel a little more seen.
+        </p>
+        <div class="host__creds">
+          <span class="cred">CFA Charterholder</span>
+          <span class="cred">MBA, Wharton</span>
+          <span class="cred">10+ yrs in finance</span>
+          <span class="cred">First-time mom</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SUBSCRIBE / NEWSLETTER -->
+  <!-- SPONSORS -->
+  <section class="sponsors section" id="sponsors">
+    <div class="container">
+      <div class="sponsors__header">
+        <span class="section-label">For Brands &amp; Partners</span>
+        <h2 class="section-title">Reach an audience that's ready to invest — in every sense.</h2>
+        <p class="sponsors__intro">The Portfolio &amp; Pacifier audience is highly engaged, financially literate, and making meaningful purchasing decisions for their families and their futures. If your brand speaks to women in finance, new mothers, or both — let's talk.</p>
+      </div>
+      <div class="sponsors__stats">
+        <div class="sstat">
+          <span class="sstat__num">50K+</span>
+          <span class="sstat__label">Monthly listeners</span>
+        </div>
+        <div class="sstat">
+          <span class="sstat__num">78%</span>
+          <span class="sstat__label">Women ages 28–42</span>
+        </div>
+        <div class="sstat">
+          <span class="sstat__num">$180K</span>
+          <span class="sstat__label">Avg. household income</span>
+        </div>
+        <div class="sstat">
+          <span class="sstat__num">4.9 ★</span>
+          <span class="sstat__label">Average rating</span>
+        </div>
+        <div class="sstat">
+          <span class="sstat__num">62%</span>
+          <span class="sstat__label">Finance professionals</span>
+        </div>
+        <div class="sstat">
+          <span class="sstat__num">91%</span>
+          <span class="sstat__label">Episode completion rate</span>
+        </div>
+      </div>
+      <div class="sponsors__offerings">
+        <div class="offering">
+          <h4>Host-Read Ad Spots</h4>
+          <p>Personal, authentic reads woven naturally into the episode — mid-roll or pre-roll. Always clearly disclosed, always genuinely endorsed.</p>
+        </div>
+        <div class="offering">
+          <h4>Sponsored Episodes</h4>
+          <p>A full episode built around a topic that aligns with your brand, co-created for relevance and trust. Deep integration, high retention.</p>
+        </div>
+        <div class="offering">
+          <h4>Newsletter &amp; Social</h4>
+          <p>Extended reach via a weekly email newsletter and cross-platform short-form content on Instagram, TikTok, and YouTube Shorts.</p>
+        </div>
+      </div>
+      <div class="sponsors__cta">
+        <a href="mailto:hello@portfolioandpacifier.com" class="btn btn--primary">Get the Media Kit</a>
+        <p class="sponsors__note">Past partners have included financial wellness apps, baby gear brands, career coaching platforms, and family financial planning services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE -->
   <section class="subscribe section" id="subscribe">
     <div class="container subscribe__inner">
       <div class="subscribe__text">
-        <span class="section-label">Never Miss an Episode</span>
-        <h2 class="section-title">Join the community</h2>
-        <p>Get new episodes, exclusive bonus content, and a weekly newsletter on finance &amp; first-time motherhood delivered straight to your inbox.</p>
+        <span class="section-label">Stay in the loop</span>
+        <h2 class="section-title">Get a weekly note <span class="script">from me to you.</span></h2>
+        <p>Every week I send a short email — a reflection, a money tip, something that made me laugh, something I learned. It's the kind of thing you actually want in your inbox.</p>
       </div>
       <form class="subscribe__form" action="#" method="post" onsubmit="handleSubscribe(event)">
-        <div class="form-row">
-          <input type="text" name="first_name" placeholder="First name" required />
-          <input type="email" name="email" placeholder="Email address" required />
-          <button type="submit" class="btn btn--primary">Subscribe</button>
-        </div>
-        <p class="form-note">No spam. Unsubscribe anytime. We protect your data.</p>
+        <input type="text" name="first_name" placeholder="Your first name" required />
+        <input type="email" name="email" placeholder="Your email address" required />
+        <button type="submit" class="btn btn--primary">Yes, I'm in ✨</button>
+        <p class="form-note">No spam. Unsubscribe any time. I actually write these myself.</p>
         <div class="form-success" id="formSuccess" hidden>
-          You're in! Check your inbox for a welcome note.
+          So glad you're here. Check your inbox for a welcome note! 🌸
         </div>
       </form>
     </div>
@@ -312,28 +312,37 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="nav__logo">P&amp;P</span>
-        <p>The Portfolio &amp; Pacifier<br/>Finance. Motherhood. Real Talk.</p>
+        <a href="#" class="footer__logo">the <em>p&amp;p</em></a>
+        <p>The Portfolio &amp; Pacifier<br/>A podcast by Jessica Morgan</p>
+        <div class="footer__socials">
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">YouTube</a>
+          <a href="#">Spotify</a>
+        </div>
       </div>
       <nav class="footer__nav">
+        <span class="footer__nav-label">Navigate</span>
         <a href="#about">About</a>
         <a href="#episodes">Episodes</a>
-        <a href="#host">Host</a>
-        <a href="#">Press Kit</a>
-        <a href="#">Sponsorship</a>
+        <a href="#host">My Story</a>
+        <a href="#subscribe">Newsletter</a>
+        <a href="#sponsors">Work With Me</a>
         <a href="#">Contact</a>
       </nav>
-      <div class="footer__platforms">
-        <a href="#" class="btn btn--ghost btn--small">Spotify</a>
-        <a href="#" class="btn btn--ghost btn--small">Apple Podcasts</a>
-        <a href="#" class="btn btn--ghost btn--small">Google Podcasts</a>
+      <div class="footer__listen">
+        <span class="footer__nav-label">Listen on</span>
+        <a href="#">Spotify</a>
+        <a href="#">Apple Podcasts</a>
+        <a href="#">YouTube</a>
+        <a href="#">Google Podcasts</a>
       </div>
     </div>
     <div class="footer__bottom container">
       <p>&copy; 2026 The Portfolio &amp; Pacifier. All rights reserved.</p>
       <div>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
       </div>
     </div>
   </footer>
