@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vision Board — Goals</title>
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">Vision</span>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="board" role="tab" aria-selected="true">Board</button>
+      <button class="tab-btn" data-tab="goals" role="tab" aria-selected="false">Goals by Quarter</button>
+      <button class="tab-btn" data-tab="reminders" role="tab" aria-selected="false">Reminders</button>
+      <button class="tab-btn" data-tab="widget" role="tab" aria-selected="false">Widget Preview</button>
+    </nav>
+    <button id="addItemBtn" class="btn-primary">+ Add to Board</button>
+  </header>
+
+  <main>
+
+    <!-- BOARD -->
+    <section id="panel-board" class="panel active">
+      <div id="boardEmpty" class="empty-state">
+        <p>Your board is empty. Add something you're working toward — a photo, a phrase, a number — and we'll help turn it into a plan.</p>
+      </div>
+      <div id="boardGrid" class="board-grid"></div>
+    </section>
+
+    <!-- GOALS -->
+    <section id="panel-goals" class="panel">
+      <div class="quarter-selector" id="quarterSelector"></div>
+      <div id="goalsList" class="goals-list"></div>
+    </section>
+
+    <!-- REMINDERS -->
+    <section id="panel-reminders" class="panel">
+      <div class="card settings-card">
+        <h2>Stay on track</h2>
+        <p class="muted">Reminders fire while this app is open in a tab, and as browser notifications if you grant permission. This is a prototype: it does not yet send reminders while the app is fully closed — that requires a backend push service, which is noted in the roadmap below.</p>
+
+        <div class="field-row">
+          <label for="notifPerm">Browser notifications</label>
+          <button id="notifPerm" class="btn-secondary">Enable notifications</button>
+          <span id="notifStatus" class="status-pill">not requested</span>
+        </div>
+
+        <div class="field-row">
+          <label for="reminderFreq">Check-in frequency</label>
+          <select id="reminderFreq">
+            <option value="daily">Daily</option>
+            <option value="weekdays">Weekdays only</option>
+            <option value="weekly">Weekly</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <label for="reminderTime">Time of day</label>
+          <input type="time" id="reminderTime" value="09:00" />
+        </div>
+
+        <div class="field-row">
+          <button id="testReminderBtn" class="btn-secondary">Send test prompt now</button>
+        </div>
+      </div>
+
+      <div id="dueCard" class="card"></div>
+    </section>
+
+    <!-- WIDGET PREVIEW -->
+    <section id="panel-widget" class="panel">
+      <p class="muted">This simulates a home-screen widget. On iOS/Android, a real live-updating OS widget needs a native app (WidgetKit / Glance) — a website can't place one on the home screen. What a web app <em>can</em> do is be "installed" as a PWA shortcut that opens straight to this compact view. Open <code>widget.html</code> on its own, or install this app and add the shortcut to your home screen, to see it standalone.</p>
+      <iframe src="widget.html" class="widget-frame" title="Widget preview"></iframe>
+    </section>
+
+  </main>
+</div>
+
+<!-- Add / Edit Item Modal -->
+<div id="itemModal" class="modal-backdrop hidden">
+  <div class="modal">
+    <h2 id="modalTitle">Add to your vision board</h2>
+    <label>What are you working toward?
+      <input type="text" id="itemTitle" placeholder="e.g. Run a half marathon" />
+    </label>
+    <label>Describe it a bit more (this is what the goal breakdown uses)
+      <textarea id="itemDesc" rows="3" placeholder="e.g. I want to run a half marathon in under 2:15, I currently run 5k twice a week"></textarea>
+    </label>
+    <label>Image URL (optional)
+      <input type="text" id="itemImage" placeholder="https://..." />
+    </label>
+    <label>Category
+      <select id="itemCategory">
+        <option>Health</option>
+        <option>Career</option>
+        <option>Finance</option>
+        <option>Relationships</option>
+        <option>Personal Growth</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Target by
+      <select id="itemQuarter"></select>
+    </label>
+
+    <div id="aiSuggestion" class="ai-suggestion hidden">
+      <div class="ai-suggestion-header">
+        <span class="ai-badge">Suggested breakdown</span>
+        <span class="muted small">Generated locally from your description — review and edit before accepting.</span>
+      </div>
+      <div id="aiSuggestionBody"></div>
+    </div>
+
+    <div class="modal-actions">
+      <button id="generateBreakdownBtn" class="btn-secondary">Generate goal breakdown</button>
+      <button id="cancelItemBtn" class="btn-tertiary">Cancel</button>
+      <button id="saveItemBtn" class="btn-primary">Save to board</button>
+    </div>
+  </div>
+</div>
+
+<div id="toastRoot" class="toast-root"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
