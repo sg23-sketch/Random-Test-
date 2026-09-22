@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vision — Widget</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #1f2430, #12151c);
+    color: #eceef2; padding: 16px; height: 100vh; overflow: hidden;
+  }
+  .widget-header { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #9aa1ae; margin-bottom: 10px; }
+  .widget-goal { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .widget-next { font-size: 12.5px; color: #c7cbd4; margin-bottom: 10px; }
+  .track { height: 6px; background: #2a2f3a; border-radius: 4px; overflow: hidden; }
+  .fill { height: 100%; background: #7c9eff; }
+  .empty { font-size: 13px; color: #9aa1ae; }
+</style>
+</head>
+<body>
+  <div class="widget-header">
+    <span id="quarterLabel">—</span>
+    <span id="daysLeft">—</span>
+  </div>
+  <div id="content"></div>
+
+<script>
+const STORE_KEY = 'vision.items.v1';
+function loadItems() {
+  try { return JSON.parse(localStorage.getItem(STORE_KEY)) || []; }
+  catch { return []; }
+}
+function currentQuarterInfo(date = new Date()) {
+  const q = Math.floor(date.getMonth() / 3) + 1;
+  return { q, year: date.getFullYear() };
+}
+function quarterKey(q, year) { return `Q${q}-${year}`; }
+function quarterBounds(key) {
+  const [qPart, yPart] = key.split('-');
+  const q = parseInt(qPart.replace('Q', ''), 10);
+  const year = parseInt(yPart, 10);
+  const startMonth = (q - 1) * 3;
+  return { start: new Date(year, startMonth, 1), end: new Date(year, startMonth + 3, 0) };
+}
+function quarterLabel(key) { const [q, y] = key.split('-'); return `${q} ${y}`; }
+function daysLeftInQuarter(key) {
+  const { end } = quarterBounds(key);
+  return Math.max(Math.ceil((end - new Date()) / 86400000), 0);
+}
+
+function render() {
+  const items = loadItems();
+  const { q, year } = currentQuarterInfo();
+  const curKey = quarterKey(q, year);
+  document.getElementById('quarterLabel').textContent = quarterLabel(curKey);
+  document.getElementById('daysLeft').textContent = `${daysLeftInQuarter(curKey)}d left`;
+
+  const inQuarter = items.filter(i => i.quarter === curKey);
+  const content = document.getElementById('content');
+
+  if (!inQuarter.length) {
+    content.innerHTML = `<div class="empty">No goals set for this quarter yet. Open the app to add one.</div>`;
+    return;
+  }
+
+  let candidates = [];
+  inQuarter.forEach(item => {
+    (item.goal?.milestones || []).forEach(m => { if (!m.done) candidates.push({ item, m }); });
+  });
+  candidates.sort((a, b) => new Date(a.m.due) - new Date(b.m.due));
+  const top = candidates[0];
+
+  if (!top) {
+    content.innerHTML = `<div class="empty">All milestones complete for this quarter 🎉</div>`;
+    return;
+  }
+  const total = top.item.goal.milestones.length;
+  const done = top.item.goal.milestones.filter(m => m.done).length;
+  const pct = Math.round((done / total) * 100);
+  content.innerHTML = `
+    <div class="widget-goal">${top.item.title}</div>
+    <div class="widget-next">Next: ${top.m.text}</div>
+    <div class="track"><div class="fill" style="width:${pct}%"></div></div>
+  `;
+}
+render();
+setInterval(render, 15000);
+window.addEventListener('storage', render);
+</script>
+</body>
+</html>

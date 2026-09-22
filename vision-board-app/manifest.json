@@ -1,0 +1,12 @@
+{
+  "name": "Vision Board — Goals",
+  "short_name": "Vision",
+  "description": "Turn a digital vision board into quarterly goals with reminders.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0f1115",
+  "theme_color": "#0f1115",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
